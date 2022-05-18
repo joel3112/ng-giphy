@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/ng-gifs'),
+      dir: require('path').join(__dirname, './coverage/ng-giphy'),
       subdir: '.',
       reporters: [
         { type: 'html' },

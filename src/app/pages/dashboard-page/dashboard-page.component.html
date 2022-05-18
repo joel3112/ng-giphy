@@ -1,0 +1,16 @@
+<div class="page-wrapper">
+  <h3>Trendings</h3>
+
+  <div class="d-flex flex-wrap mt-4">
+    <div class="gifs row g-2">
+      <ng-container *ngFor="let gif of trendings">
+        <app-card
+          class="gif col-sm-6 col-md-4 col-lg-3"
+          title="{{ gif.title }}"
+          image="{{ gif.url }}"
+          width="{{ gif.width }}"
+          height="{{ gif.height }}"></app-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

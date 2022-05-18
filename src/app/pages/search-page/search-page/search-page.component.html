@@ -1,0 +1,22 @@
+<div class="page-wrapper">
+  <h3>Search results for "{{query}}"</h3>
+
+  <div class="d-flex flex-wrap mt-4">
+    <div class="empty-message" *ngIf="!gifs.length; else list">
+      <span>Results not found!!!</span>
+    </div>
+
+    <ng-template #list>
+      <div class="gifs row g-2">
+        <ng-container *ngFor="let gif of gifs">
+          <app-card
+            class="gif col-sm-6 col-md-4 col-lg-3"
+            title="{{ gif.title }}"
+            image="{{ gif.url }}"
+            width="{{ gif.width }}"
+            height="{{ gif.height }}"></app-card>
+        </ng-container>
+      </div>
+    </ng-template>
+  </div>
+</div>
