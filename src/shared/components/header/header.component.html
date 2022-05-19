@@ -7,17 +7,16 @@
   </a>
 
   <div class="search mt-3">
-    <form class="d-flex">
+    <form
+      class="d-flex"
+      [formGroup]="searchForm"
+      (ngSubmit)="onSubmit(searchForm)">
       <input
-        [(ngModel)]="searchValue"
-        name="query"
+        formControlName="query"
         type="text"
         placeholder="Search all gifs"
         class="input form-control rounded-0 border-0" />
-      <button
-        type="submit"
-        class="button btn rounded-0 border-0"
-        (click)="handleSearchText()">
+      <button type="submit" class="button btn rounded-0 border-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
