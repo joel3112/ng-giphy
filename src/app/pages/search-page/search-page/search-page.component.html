@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-  <h3>Search results for "{{query}}"</h3>
+  <h3>Search results for "{{ query }}"</h3>
 
   <div class="d-flex flex-wrap mt-4">
     <div class="empty-message" *ngIf="!gifs.length; else list">
@@ -9,5 +9,11 @@
     <ng-template #list>
       <app-grid [items]="gifs"></app-grid>
     </ng-template>
+
+    <ng-container *ngIf="limit * page < totalGifs">
+      <button class="load-more btn bg-light text-dark" (click)="handleLoadMore()">
+        Load more
+      </button>
+    </ng-container>
   </div>
 </div>

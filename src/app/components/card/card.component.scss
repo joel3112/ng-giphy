@@ -1,8 +1,8 @@
 .card {
   color: #121212;
-  position: relative;
 
   .image {
+    position: relative;
     height: 200px;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,8 +15,8 @@
 
   .actions {
     position: absolute;
-    bottom: 60px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
   }
 
   .action {

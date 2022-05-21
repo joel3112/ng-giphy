@@ -106,3 +106,8 @@ export interface Gif {
   height: string;
   width: string;
 }
+
+export interface ListGif {
+  total_count: number;
+  data: Gif[];
+}
